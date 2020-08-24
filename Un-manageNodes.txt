@@ -1,0 +1,13 @@
+- name: Mute hosts
+  hosts: all
+  gather_facts: no
+  tasks: 
+    - orion_node:
+        hostname: "{{solarwinds_host}}"
+        username: "{{solarwinds_username}}"
+        password: "{{solarwinds_password}}"
+        name: "{{inventory_hostname}}"
+        state: muted       
+        unmanage_from: "2020-03-13T20:58:22.033"
+        unmanage_until: "2020-03-14T20:58:22.033"
+      delegate_to: localhost

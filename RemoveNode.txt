@@ -1,0 +1,7 @@
+- name:  Remove a node from Orion
+  orion_node:
+	hostname: "<Hostname of orion server>"
+	username: Orion Username
+	password: Orion Password
+	name: servername
+	state: absent
